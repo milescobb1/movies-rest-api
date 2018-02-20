@@ -1,0 +1,12 @@
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /getAll.php
+  script: getAll.php
+- url: /createList.php
+  script: createList.php
+- url: /deleteMove.php
+  script: deleteMove.php
+- url: /createMovie.php
+  script: createMovie.php
