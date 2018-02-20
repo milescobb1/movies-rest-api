@@ -10,12 +10,12 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
       foreach($lists as $list ){
          $ret[$list['name']] = array();
       };
-      $query = "SELECT lists.name as lname, movies.name, lists.ID from lists join movies on movies.listID = lists.ID WHERE lists.UID = ?";
+      $query = "SELECT lists.name as lname, movies.name, movies.link, lists.ID from lists join movies on movies.listID = lists.ID WHERE lists.UID = ?";
       $statement = $db -> prepare($query);
       $statement->execute(array($_GET['UID']));
       $movies = $statement->fetchAll();
       foreach($movies as $movie) {
-         array_push($ret[$movie['lname']], $movie['name']);
+         array_push($ret[$movie['lname']], ['name' => $movie['name'], 'link' => $movie['link']]);
       }
       print(json_encode($ret));
    }
