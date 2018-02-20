@@ -6,7 +6,9 @@ handlers:
   script: getAll.php
 - url: /createList.php
   script: createList.php
-- url: /deleteMove.php
-  script: deleteMove.php
+- url: /deleteMovie.php
+  script: deleteMovie.php
 - url: /createMovie.php
   script: createMovie.php
+- url: /deleteList.php
+  script: deleteList.php

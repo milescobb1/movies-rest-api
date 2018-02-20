@@ -5,11 +5,10 @@
    // $GLOBALS["database"] = "Movie_Lists"; 
 
    header("Access-Control-Allow-Origin: *");
-   
+
    $dsn = "mysql:dbname=movieLists;unix_socket=/cloudsql/movie-lists-194921:us-west1:movie-list-db";
    $user = "user";
    $password = "H21208272CC3983D";
-   
    
    try
    {
